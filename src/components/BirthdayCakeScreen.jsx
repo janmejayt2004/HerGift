@@ -255,7 +255,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
             <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.5, 0.5], rotate: 180 }} transition={{ repeat: Infinity, duration: 2 }} className="absolute -top-6 left-[15%] md:left-[25%] text-4xl text-yellow-200 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">✨</motion.div>
             <motion.div animate={{ opacity: [0, 1, 0], scale: [0.8, 1.8, 0.8], rotate: -90 }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.8 }} className="absolute top-8 right-[10%] md:right-[20%] text-5xl text-pink-200 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">✨</motion.div>
             <motion.div animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5], rotate: 45 }} transition={{ repeat: Infinity, duration: 1.8, delay: 1.5 }} className="absolute -bottom-8 left-[30%] md:left-[40%] text-3xl text-cyan-200 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">✨</motion.div>
-            
+
             <div className="relative">
               {phase >= 3 ? (
                 <motion.h1
@@ -334,12 +334,12 @@ const BirthdayCakeScreen = ({ onFinish }) => {
           <div className="relative z-[50] flex flex-col items-center -mt-8">
             {/* Top Surface */}
             <div className="w-48 h-16 bg-[#FFC0CB] rounded-[50%] border-4 border-white shadow-[inset_0_-10px_0_rgba(0,0,0,0.1)] relative flex justify-center items-center z-20">
-               <div className="absolute top-1 text-2xl drop-shadow-sm z-10">🎀</div>
-               {/* Strawberries on the edge */}
-               <div className="absolute -top-1 left-2 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute -top-1 right-2 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute top-2 left-10 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute top-2 right-10 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-1 text-2xl drop-shadow-sm z-10">🎀</div>
+              {/* Strawberries on the edge */}
+              <div className="absolute -top-1 left-2 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute -top-1 right-2 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-2 left-10 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-2 right-10 text-lg drop-shadow-sm">🍓</div>
             </div>
             {/* Body */}
             <div className="w-48 h-20 bg-[#FFC0CB] border-x-4 border-b-4 border-[#FF82AB] -mt-8 relative overflow-hidden z-10">
@@ -365,20 +365,20 @@ const BirthdayCakeScreen = ({ onFinish }) => {
           <div className="relative z-[40] flex flex-col items-center -mt-10">
             {/* Top Surface */}
             <div className="w-64 h-20 bg-[#FFE4E1] rounded-[50%] border-4 border-white shadow-[inset_0_-10px_0_rgba(0,0,0,0.1)] relative flex justify-center z-20">
-               <div className="absolute top-1 left-4 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute top-1 right-4 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute top-4 left-16 text-lg drop-shadow-sm">🍓</div>
-               <div className="absolute top-4 right-16 text-lg drop-shadow-sm">🍓</div>
-               
-               <div className="absolute top-4 left-24 text-sm drop-shadow-sm">🍫</div>
-               <div className="absolute top-4 right-24 text-sm drop-shadow-sm">🍫</div>
-               <div className="absolute top-8 left-32 text-sm drop-shadow-sm">🍫</div>
-               <div className="absolute top-6 left-8 text-sm drop-shadow-sm">🍫</div>
-               <div className="absolute top-6 right-8 text-sm drop-shadow-sm">🍫</div>
+              <div className="absolute top-1 left-4 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-1 right-4 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-4 left-16 text-lg drop-shadow-sm">🍓</div>
+              <div className="absolute top-4 right-16 text-lg drop-shadow-sm">🍓</div>
+
+              <div className="absolute top-4 left-24 text-sm drop-shadow-sm">🍫</div>
+              <div className="absolute top-4 right-24 text-sm drop-shadow-sm">🍫</div>
+              <div className="absolute top-8 left-32 text-sm drop-shadow-sm">🍫</div>
+              <div className="absolute top-6 left-8 text-sm drop-shadow-sm">🍫</div>
+              <div className="absolute top-6 right-8 text-sm drop-shadow-sm">🍫</div>
             </div>
             {/* Body */}
             <div className="w-64 h-24 bg-[#FFE4E1] border-x-4 border-b-4 border-[#FFB6C1] -mt-10 relative z-10 overflow-hidden">
-               {/* Sprinkles absolute positioned to stay safely inside */}
+              {/* Sprinkles absolute positioned to stay safely inside */}
               <div className="absolute top-10 left-6 w-2 h-6 bg-pink-400 rounded-full shadow-sm transform rotate-45"></div>
               <div className="absolute top-12 left-14 w-2 h-6 bg-yellow-400 rounded-full shadow-sm transform -rotate-12"></div>
               <div className="absolute top-14 left-24 w-2 h-6 bg-blue-400 rounded-full shadow-sm transform rotate-12"></div>
@@ -388,7 +388,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
               <div className="absolute top-10 right-6 w-2 h-6 bg-orange-400 rounded-full shadow-sm transform -rotate-[60deg]"></div>
               <div className="absolute top-16 right-24 w-2 h-6 bg-green-400 rounded-full shadow-sm transform rotate-12"></div>
               <div className="absolute top-12 right-32 w-2 h-6 bg-cyan-400 rounded-full shadow-sm transform -rotate-45"></div>
-              
+
               {/* Extra chocolates */}
               <div className="absolute top-12 left-4 text-xs drop-shadow-sm">🍫</div>
               <div className="absolute top-16 right-4 text-xs drop-shadow-sm">🍫</div>
@@ -405,7 +405,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
       {phase >= 1 && (
         <div
           className="absolute flex items-end transform scale-[0.9] md:scale-[1.1] z-[100] pointer-events-none"
-          style={{ right: '5%', bottom: '5%' }}
+          style={{ right: '10%', bottom: '5%' }}
         >
           <motion.div
             drag={EDITOR_MODE}
@@ -413,70 +413,70 @@ const BirthdayCakeScreen = ({ onFinish }) => {
             onDragEnd={(e, i) => handleUpdatePos('duck', 'duck', e, i)}
             initial={EDITOR_MODE ? { x: 0, opacity: 1 } : { x: '-100vw', opacity: 1 }}
             animate={EDITOR_MODE ? {} : { x: 0, opacity: 1 }}
-            transition={{ duration: 5.5, ease: "easeInOut" }}
-            className={`flex flex-col items-center pointer-events-auto ${EDITOR_MODE ? 'cursor-move' : ''}`}
+            transition={{ duration: 5.5, ease: [0.25, 1, 0.5, 1] }}
+            className={`relative flex flex-col items-center pointer-events-auto ${EDITOR_MODE ? 'cursor-move' : ''}`}
           >
             {/* Dialogue Cloud Bubble */}
             {phase >= 2 && (
               <motion.div
-                initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                animate={phase === 3 ? { scale: [1, 1.05, 1], opacity: 1, y: 0 } : { opacity: 1, scale: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.5, y: 20, x: '-50%' }}
+                animate={phase === 3 ? { scale: [1, 1.05, 1], opacity: 1, y: 0, x: '-50%' } : { opacity: 1, scale: 1, y: 0, x: '-50%' }}
                 transition={{ duration: 0.7, type: "spring", bounce: 0.6 }}
-                className="bg-white px-5 py-4 rounded-[2.5rem] shadow-2xl border-4 border-sky-200 mb-4 max-w-[260px] md:max-w-[300px] relative text-center"
+                className="absolute bottom-[100%] left-[50%] bg-white px-5 py-4 rounded-[2.5rem] shadow-2xl border-4 border-sky-200 mb-4 w-max max-w-[260px] md:max-w-[300px] text-center"
               >
-              {/* Extra Cloud Puffs for Fluffiness */}
-              <div className="absolute -top-4 left-6 w-12 h-12 bg-white rounded-full z-0"></div>
-              <div className="absolute -top-5 right-10 w-16 h-16 bg-white rounded-full z-0"></div>
-              
-              {/* Cloud Tail */}
-              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white border-r-4 border-b-4 border-sky-200 rotate-45 z-10"></div>
+                {/* Extra Cloud Puffs for Fluffiness */}
+                <div className="absolute -top-4 left-6 w-12 h-12 bg-white rounded-full z-0"></div>
+                <div className="absolute -top-5 right-10 w-16 h-16 bg-white rounded-full z-0"></div>
 
-              <div className="relative z-20">
-                {phase === 2 && (
-                  <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
-                    Quack! ✨ Make a sweet wish,<br />then tap candles to blow! 🎂
-                  </p>
-                )}
-                {phase === 3 && (
-                  <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
-                    Wooohoo! ✨ Your beautiful wish<br />is definitely coming true! 💫
-                  </p>
-                )}
-                {phase === 4 && duckMood !== 'happy' && (
-                  <div>
-                    <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug mb-3">
-                      Do you want to see your surprises?
+                {/* Cloud Tail */}
+                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white border-r-4 border-b-4 border-sky-200 rotate-45 z-10"></div>
+
+                <div className="relative z-20">
+                  {phase === 2 && (
+                    <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
+                      BabyDolll! ✨ Make a wish,<br />then tap candles to blow! 🎂
                     </p>
-                    <div className="flex gap-3 justify-center relative">
-                      <button
-                        onClick={() => handleSurpriseChoice('yes')}
-                        className="bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all z-10"
-                      >
-                        Yes! ✨
-                      </button>
-                      <motion.button
-                        animate={{ x: noBtnPos.x, y: noBtnPos.y }}
-                        onHoverStart={() => {
-                          const randomX = (Math.random() - 0.5) * 200;
-                          const randomY = (Math.random() - 0.5) * 200;
-                          setNoBtnPos({ x: randomX, y: randomY });
-                          setDuckMood('sad'); // Make the duck look sad when she tries to say no!
-                        }}
-                        onClick={() => handleSurpriseChoice('no')}
-                        className="bg-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-bold shadow-sm z-20"
-                      >
-                        No
-                      </motion.button>
+                  )}
+                  {phase === 3 && (
+                    <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
+                      Wooohoo! ✨ Your beautiful wish<br />is definitely coming true! 💫
+                    </p>
+                  )}
+                  {phase === 4 && duckMood !== 'happy' && (
+                    <div>
+                      <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug mb-3">
+                        Do you want to see your surprises?
+                      </p>
+                      <div className="flex gap-3 justify-center relative">
+                        <button
+                          onClick={() => handleSurpriseChoice('yes')}
+                          className="bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md hover:shadow-lg hover:scale-105 transition-all z-10"
+                        >
+                          Yes! ✨
+                        </button>
+                        <motion.button
+                          animate={{ x: noBtnPos.x, y: noBtnPos.y }}
+                          onHoverStart={() => {
+                            const randomX = (Math.random() - 0.5) * 200;
+                            const randomY = (Math.random() - 0.5) * 200;
+                            setNoBtnPos({ x: randomX, y: randomY });
+                            setDuckMood('sad'); // Make the duck look sad when she tries to say no!
+                          }}
+                          onClick={() => handleSurpriseChoice('no')}
+                          className="bg-gray-200 text-gray-600 px-5 py-2 rounded-full text-sm font-bold shadow-sm z-20"
+                        >
+                          No
+                        </motion.button>
+                      </div>
                     </div>
-                  </div>
-                )}
-                {phase === 4 && duckMood === 'happy' && (
-                  <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
-                    Yay! Let's gooooo! 🥳
-                  </p>
-                )}
-              </div>
-            </motion.div>
+                  )}
+                  {phase === 4 && duckMood === 'happy' && (
+                    <p className="text-[#5C4A47] font-nunito font-bold text-[14px] leading-snug">
+                      Yay! Let's gooooo! 🥳
+                    </p>
+                  )}
+                </div>
+              </motion.div>
             )}
 
             {/* Cute Static Duck with Party Hat */}

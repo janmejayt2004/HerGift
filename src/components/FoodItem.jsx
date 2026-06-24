@@ -22,14 +22,15 @@ const FoodItem = ({ id, type, emoji, imageSrc, onClick, isEating, isEaten, isLoc
         }}
         transition={{ 
           y: { repeat: isEaten ? 0 : Infinity, duration: 1.5, ease: "easeInOut" },
-          scale: { duration: isEating ? 0.3 : 0.5, type: 'spring' }
+          scale: { type: 'spring', stiffness: 350, damping: 25 },
+          opacity: { duration: 0.2 }
         }}
         onClick={(e) => {
           e.stopPropagation();
           if (!isEating) onClick(e);
         }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={!isLocked && !isEaten ? { scale: 1.08, y: -5 } : {}}
+        whileTap={!isLocked && !isEaten ? { scale: 0.92 } : {}}
       >
         <div className={`w-36 h-36 md:w-44 md:h-44 bg-white/60 backdrop-blur-md rounded-full flex items-center justify-center text-8xl md:text-9xl shadow-[0_10px_20px_rgba(0,0,0,0.1)] border-2 border-white/80 transition-colors relative transform-gpu ${isLocked ? 'border-gray-300' : 'group-hover:border-[#FF1E56]'}`}>
         

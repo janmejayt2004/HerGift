@@ -114,8 +114,8 @@ const InteractiveDuck = ({ targetPosition, isEating, isIdle, isSad }) => {
           scaleX: facingRight ? 1 : -1
         }}
         transition={{
-          x: { duration: 2, ease: "easeInOut" },
-          y: { duration: 2, ease: "easeInOut" },
+          x: { duration: 2, ease: [0.25, 1, 0.5, 1] },
+          y: { duration: 2, ease: [0.25, 1, 0.5, 1] },
         }}
         onClick={handleDuckClick}
       >

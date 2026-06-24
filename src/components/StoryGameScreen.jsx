@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import InteractiveDuck from './InteractiveDuck';
 import FoodItem from './FoodItem';
@@ -68,6 +68,7 @@ const StoryGameScreen = ({ onStationUnlock }) => {
   const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
   const [idlePositionPct, setIdlePositionPct] = useState({ x: 0.5, y: 0.5 }); // Start exactly in center
+  const walkTimeoutRef = useRef(null);
 
   const currentStage = GAME_STAGES[currentStageIndex];
 
@@ -96,12 +97,7 @@ const StoryGameScreen = ({ onStationUnlock }) => {
   const clampedTailOffset = Math.max(-maxTailOffset, Math.min(maxTailOffset, tailOffset));
 
   const handleBackgroundClick = (e) => {
-    // Prevent clicking on food or stickers from triggering this (they should call e.stopPropagation())
-    if (e.target !== e.currentTarget && !e.currentTarget.classList.contains('bg-[var(--color-cream)]')) {
-      return;
-    }
-
-    if (isDuckEating || !isDuckIdle) return;
+    if (isDuckEating) return;
 
     const x = e.clientX;
     const y = e.clientY;
@@ -109,14 +105,19 @@ const StoryGameScreen = ({ onStationUnlock }) => {
     setDuckTarget({ x, y });
     setIsDuckIdle(false);
 
+    if (walkTimeoutRef.current) {
+      clearTimeout(walkTimeoutRef.current);
+    }
+
     // Walk for 2 seconds
-    setTimeout(() => {
+    walkTimeoutRef.current = setTimeout(() => {
       setDuckTarget(null);
       setIsDuckIdle(true);
       setIdlePositionPct({
         x: x / window.innerWidth,
         y: y / window.innerHeight
       });
+      walkTimeoutRef.current = null;
     }, 2000);
   };
 
@@ -223,12 +224,12 @@ const StoryGameScreen = ({ onStationUnlock }) => {
 
       {/* Dialogue Box - Follows the Duck with Clamping */}
       <motion.div
-        className="absolute z-30 w-[90%] max-w-[350px]"
+        className="absolute z-30 w-[90%] max-w-[350px] pointer-events-none"
         animate={{
           left: bubbleLeft,
           top: duckY - 120
         }}
-        transition={{ duration: 2, ease: "easeInOut" }} // Match the duck's exact walking speed!
+        transition={{ duration: 2, ease: [0.25, 1, 0.5, 1] }} // Match the duck's exact walking speed!
         style={{ transform: 'translate(-50%, -100%)' }}
       >
         <AnimatePresence mode="wait">

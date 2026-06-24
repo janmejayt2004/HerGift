@@ -24,6 +24,7 @@ const StorybookModal = ({ isOpen, onClose, children, title }) => {
               backgroundImage: 'radial-gradient(#ffd0d6 2px, transparent 2px)',
               backgroundSize: '30px 30px'
             }}
+            data-lenis-prevent="true"
             initial={{ scale: 0.95, y: 20, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 10, opacity: 0 }}
