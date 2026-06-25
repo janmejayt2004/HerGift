@@ -261,7 +261,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
                 <motion.h1
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 leading-[1.1] pb-6 px-4 text-center"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 leading-[1.1] pb-6 px-4 text-center"
                   style={{
                     fontFamily: '"Sniglet", cursive',
                     filter: "drop-shadow(3px 3px 0px rgba(255,255,255,1)) drop-shadow(6px 6px 0px rgba(255,105,180,0.6))"
@@ -272,7 +272,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
               ) : (
                 <TypingText
                   text="Happy Birthday Suhani!"
-                  className="text-5xl md:text-6xl lg:text-[5.5rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 leading-[1.1] pb-6 px-4 text-center"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-rose-400 leading-[1.1] pb-6 px-4 text-center"
                   style={{
                     fontFamily: '"Sniglet", cursive',
                     backgroundSize: "200% 200%",
@@ -286,7 +286,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
       </AnimatePresence>
 
       {/* The Cake */}
-      <div className="relative z-50 flex flex-col items-center mt-32 md:mt-40 scale-[1.1] md:scale-[1.4] pointer-events-none">
+      <div className="relative z-50 flex flex-col items-center mt-32 md:mt-40 scale-[0.8] sm:scale-[1.1] md:scale-[1.4] pointer-events-none">
         <motion.div
           drag={EDITOR_MODE}
           dragMomentum={false}
@@ -404,8 +404,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
       {/* Duck Character & Dialogue */}
       {phase >= 1 && (
         <div
-          className="absolute flex items-end transform scale-[0.9] md:scale-[1.1] z-[100] pointer-events-none"
-          style={{ right: '10%', bottom: '5%' }}
+          className="absolute flex items-end transform scale-[0.7] sm:scale-[0.9] md:scale-[1.1] z-[100] pointer-events-none right-[5%] md:right-[10%] bottom-[5%]"
         >
           <motion.div
             drag={EDITOR_MODE}

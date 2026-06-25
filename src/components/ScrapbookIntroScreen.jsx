@@ -33,14 +33,14 @@ const ScrapbookIntroScreen = ({ onNext }) => {
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: -5 }}
           transition={{ type: "spring", damping: 12, delay: 0.2 }}
-          className="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border-4 border-white shadow-2xl relative max-w-2xl w-[90%] text-center pointer-events-auto"
+          className="bg-white/80 backdrop-blur-md p-6 sm:p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border-4 border-white shadow-2xl relative max-w-2xl w-[90%] text-center pointer-events-auto"
         >
           {/* Internal corner tapes */}
           <div className="absolute -top-4 -left-4 w-12 h-4 bg-pink-400/50 rotate-[-45deg]" />
           <div className="absolute -bottom-4 -right-4 w-12 h-4 bg-pink-400/50 rotate-[-45deg]" />
 
           <motion.h1 
-            className="font-caveat text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-400 to-purple-500 drop-shadow-sm leading-tight"
+            className="font-caveat text-3xl sm:text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-400 to-purple-500 drop-shadow-sm leading-tight"
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             style={{ backgroundSize: "200% 200%" }}
@@ -52,7 +52,7 @@ const ScrapbookIntroScreen = ({ onNext }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="mt-6 font-quicksand text-xl md:text-2xl text-gray-600 font-semibold"
+            className="mt-4 sm:mt-6 font-quicksand text-lg sm:text-xl md:text-2xl text-gray-600 font-semibold"
           >
             A whole era of gorgeousness begins now. 💖
           </motion.p>
