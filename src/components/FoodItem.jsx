@@ -12,16 +12,14 @@ const FoodItem = ({ id, type, emoji, imageSrc, onClick, isEating, isEaten, isLoc
       style={{ transform: `rotate(${randomRotation}deg)` }}
     >
       <motion.div
-        className="cursor-pointer flex flex-col items-center justify-center group transform-gpu"
-        style={{ transform: 'translate(-50%, -50%)' }}
+        className={`cursor-pointer flex flex-col items-center justify-center group transform-gpu ${(!isEating && !isEaten) ? 'animate-float' : ''}`}
+        style={{ transform: 'translate(-50%, -50%)', animationDuration: `${1.5 + (id.length % 2)}s` }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ 
           scale: isEating ? 0 : 1, 
-          opacity: isEating ? 0 : 1,
-          y: isEating || isEaten ? 0 : [0, -10, 0] 
+          opacity: isEating ? 0 : 1
         }}
         transition={{ 
-          y: { repeat: isEaten ? 0 : Infinity, duration: 1.5, ease: "easeInOut" },
           scale: { type: 'spring', stiffness: 350, damping: 25 },
           opacity: { duration: 0.2 }
         }}
@@ -29,7 +27,7 @@ const FoodItem = ({ id, type, emoji, imageSrc, onClick, isEating, isEaten, isLoc
           e.stopPropagation();
           if (!isEating) onClick(e);
         }}
-        whileHover={!isLocked && !isEaten ? { scale: 1.08, y: -5 } : {}}
+        whileHover={!isLocked && !isEaten ? { scale: 1.08 } : {}}
         whileTap={!isLocked && !isEaten ? { scale: 0.92 } : {}}
       >
         <div className={`w-36 h-36 md:w-44 md:h-44 bg-white/60 backdrop-blur-md rounded-full flex items-center justify-center text-8xl md:text-9xl shadow-[0_10px_20px_rgba(0,0,0,0.1)] border-2 border-white/80 transition-colors relative transform-gpu ${isLocked ? 'border-gray-300' : 'group-hover:border-[#FF1E56]'}`}>
@@ -47,14 +45,12 @@ const FoodItem = ({ id, type, emoji, imageSrc, onClick, isEating, isEaten, isLoc
                 className="absolute inset-0 flex justify-center items-start transform-gpu"
                 style={{ transform: `rotate(${angle}deg)` }}
               >
-                <motion.span 
+                <span 
                   className="text-2xl md:text-3xl drop-shadow-sm transform-gpu"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ repeat: Infinity, duration: 2, delay: i * 0.2, ease: "easeInOut" }}
                   style={{ display: 'inline-block' }}
                 >
                   💖
-                </motion.span>
+                </span>
               </div>
             ))}
           </motion.div>

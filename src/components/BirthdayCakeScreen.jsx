@@ -267,7 +267,7 @@ const BirthdayCakeScreen = ({ onFinish }) => {
                     filter: "drop-shadow(3px 3px 0px rgba(255,255,255,1)) drop-shadow(6px 6px 0px rgba(255,105,180,0.6))"
                   }}
                 >
-                  Chatpati baddie<br />turns 21 today
+                  Chatpati Cutie<br />turns 21 today
                 </motion.h1>
               ) : (
                 <TypingText

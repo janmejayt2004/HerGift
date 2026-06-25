@@ -19,7 +19,7 @@ const StorybookModal = ({ isOpen, onClose, children, title }) => {
         >
           <motion.div
             className="modal-content relative w-full max-w-4xl h-full max-h-[90vh] rounded-3xl shadow-[0_20px_50px_-10px_rgba(255,30,86,0.2)] border-8 border-white/90 overflow-y-auto transform-gpu"
-            style={{ 
+            style={{
               backgroundColor: '#fffafb',
               backgroundImage: 'radial-gradient(#ffd0d6 2px, transparent 2px)',
               backgroundSize: '30px 30px'
@@ -36,14 +36,14 @@ const StorybookModal = ({ isOpen, onClose, children, title }) => {
               <h2 className="text-2xl font-bold text-[var(--color-accent-red)] font-nunito flex items-center gap-2">
                 {title}
               </h2>
-              <button 
+              <button
                 onClick={onClose}
                 className="w-10 h-10 rounded-full bg-white text-[var(--color-accent-red)] flex items-center justify-center font-bold hover:bg-[var(--color-accent-red)] hover:text-white hover:scale-110 transition-all shadow-sm border border-pink-100"
               >
                 ✕
               </button>
             </div>
-            
+
             {/* Content Body */}
             <div className="p-6 md:p-10 relative z-0">
               {children}

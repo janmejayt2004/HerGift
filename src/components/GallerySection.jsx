@@ -4,7 +4,7 @@ const GallerySection = () => {
   const sections = [
     {
       id: 1,
-      quote: "Just a pyaara phool admiring other pyaara phools",
+      quote: "Just a pyaara phool admiring other pyaara phool",
       photos: [
         { id: 1, rot: '-rotate-1', url: '/memories/photo1.png' },
         { id: 2, rot: 'rotate-2', url: '/memories/photo2.DNG' },
@@ -12,7 +12,7 @@ const GallerySection = () => {
     },
     {
       id: 2,
-      quote: "Traditionals mein badi Khoobsurat Lagti hoo jii",
+      quote: "Traditionals mein badi Khoobsurat Lagti hoo",
       photos: [
         { id: 3, rot: '-rotate-2', url: '/memories/photo3.jpeg' },
         { id: 4, rot: 'rotate-3', url: '/memories/photo4.jpeg' },
@@ -20,7 +20,7 @@ const GallerySection = () => {
     },
     {
       id: 3,
-      quote: "Mein Bachpan se hie Baddie hun!!",
+      quote: "Aur Bachpan se hie Baddie hoo!!",
       photos: [
         { id: 5, rot: '-rotate-3', url: '/memories/photo5.jpeg' },
         { id: 6, rot: 'rotate-1', url: '/memories/photo6.jpeg' },

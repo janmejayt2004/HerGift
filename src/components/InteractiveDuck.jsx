@@ -63,7 +63,7 @@ const InteractiveDuck = ({ targetPosition, isEating, isIdle, isSad }) => {
 
   const handleDuckClick = (e) => {
     e.stopPropagation(); 
-    if (isEating || isMoving || isSad) return; // Don't interrupt eating, moving or sadness
+    if (isEating || isMoving || isSad || isShy) return; // Don't interrupt eating, moving, sadness, or if already shy
 
     setIsShy(true);
     
