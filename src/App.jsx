@@ -30,10 +30,10 @@ function App() {
 
   const getStationTitle = () => {
     switch (activeStation) {
-      case 'poem': return 'A Little Poem For You 📜';
-      case 'message': return 'A Special Message 💌';
-      case 'gallery': return 'Beautiful Memories 📸';
-      case 'video': return 'Surprise Video 🎬';
+      case 'poem': return 'Tere Liye kuch Khayal 📜';
+      case 'message': return 'A Special Birthday Message 💌';
+      case 'gallery': return 'Photus 📸';
+      case 'video': return 'Chotu su Edit for You 🎬';
       default: return '';
     }
   };
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="w-full h-screen bg-[var(--color-cream)] relative overflow-hidden">
-      
+
       <AnimatePresence mode="wait">
         {currentPhase === 'pin' && (
           <PinScreen key="pin" onUnlock={() => setCurrentPhase('cake')} />
@@ -58,8 +58,8 @@ function App() {
       </AnimatePresence>
 
       {/* The Storybook Modal for Surprises */}
-      <StorybookModal 
-        isOpen={!!activeStation} 
+      <StorybookModal
+        isOpen={!!activeStation}
         onClose={handleModalClose}
         title={getStationTitle()}
       >

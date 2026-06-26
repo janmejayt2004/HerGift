@@ -4,9 +4,9 @@ const GallerySection = () => {
   const sections = [
     {
       id: 1,
-      quote: "Just a pyaara phool admiring other pyaara phool",
+      quote: "Phool ke hath mein Phool",
       photos: [
-        { id: 1, rot: '-rotate-1', url: '/memories/photo1.png' },
+        { id: 1, rot: '-rotate-1', url: '/memories/photo1.jpeg' },
         { id: 2, rot: 'rotate-2', url: '/memories/photo2.DNG' },
       ]
     },

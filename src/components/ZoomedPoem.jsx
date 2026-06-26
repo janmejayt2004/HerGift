@@ -34,7 +34,7 @@ export default function ZoomedPoem({ layoutId }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            "The Title Goes Here"
+            "Tere Bare Mein"
           </motion.h3>
 
           <div className="space-y-8 font-caveat text-2xl md:text-3xl text-text-dark leading-relaxed text-center">
@@ -43,10 +43,10 @@ export default function ZoomedPoem({ layoutId }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              This is where your first stanza goes,<br/>
-              A line about laughter, a line about woes,<br/>
-              Something clever and witty right here,<br/>
-              Reminding them why you hold them so dear.
+              Tere bare mein likhna kuch yun chahun,<br/>
+              Teri shardiyo mein dhoop aur muskilo mein shukoon chahun,<br/>
+              Tere raasto mein aai kaanto ko mein chumbh javun,<br/>
+              Teri saari khwahish puri karneka junoon chahun.
             </motion.p>
 
             <motion.div 
@@ -63,10 +63,10 @@ export default function ZoomedPoem({ layoutId }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              Another stanza sitting pretty right here,<br/>
-              With words that sparkle and thoughts so clear,<br/>
-              Replace these lines with what's in your heart,<br/>
-              This is just the placeholder part!
+              Lekin tu khud hie itni kabil hai,<br/>
+              Teri hasrate puri karneki tujhie mein gunjaish hai,<br/>
+              Haan yeh sirf teri tareef hai,<br/>
+              Teri kamiyabi ke sapne sakar ho uski numaish hai.
             </motion.p>
 
             <motion.div 
@@ -83,10 +83,30 @@ export default function ZoomedPoem({ layoutId }) {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.8 }}
             >
-              And in the final stanza you'll say,<br/>
-              How grateful you are for them every day,<br/>
-              A beautiful ending, heartfelt and true,<br/>
-              Happy Birthday — this poem's for you!
+              Par tu Kitni pyaari hai, jese koi apsara swarg se aai hai,<br/>
+              Jheel sie Ankhe, phool se hooth,<br/>
+              Noor bhara chehra, Uda de kisike Hosh,<br/>
+              Gulaab sie laali tu bin taiyar hui aai, Narm sie bolie teri sabko bhhai.
+            </motion.p>
+
+            <motion.div 
+              className="text-lav-300"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.1 }}
+            >
+              ~ 🌸 ~
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.4 }}
+            >
+              Mere pass lafz kam aur khat hai adhura,<br/>
+              Teri khoobshurati ka bayan na kar pau pura,<br/>
+              Par jo bhi likhu, likhu sachai se,<br/>
+              Aur haan yeh sach hai ki tujhe mein bhot achhai hai.
             </motion.p>
           </div>
         </div>
