@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const PinScreen = ({ onUnlock, correctPin = "2716" }) => {
+const PinScreen = ({ onUnlock, correctPin = "7777" }) => {
   const [pin, setPin] = useState(['', '', '', '']);
   const [error, setError] = useState(false);
 

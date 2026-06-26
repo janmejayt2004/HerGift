@@ -30,9 +30,9 @@ function App() {
 
   const getStationTitle = () => {
     switch (activeStation) {
-      case 'poem': return 'Tere Liye kuch Khayal 📜';
+      case 'poem': return 'Tried to Write something hehe 📜';
       case 'message': return 'A Special Birthday Message 💌';
-      case 'gallery': return 'Photus 📸';
+      case 'gallery': return 'Your Pretty Photus 📸';
       case 'video': return 'Chotu su Edit for You 🎬';
       default: return '';
     }

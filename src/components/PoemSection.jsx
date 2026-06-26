@@ -22,7 +22,7 @@ const PoemSection = () => {
           Par Tu Kitni pyaari hai, jese koi apsara swarg se aai hai<br />
           Jheel sie Ankhe, phool se hooth<br />
           Noor bhara chehra, Uda de kisike Hosh<br />
-          Gulaab sie laali tu bin taiyar hui aai, Narm sie bolie teri sabko bhhai
+          Gulaal sie laali Tu bin taiyar hui aai, Narm sie bolie Teri sabko bhhai
         </p>
 
         <p>
